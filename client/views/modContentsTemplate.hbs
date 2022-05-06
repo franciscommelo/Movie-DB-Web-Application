@@ -1,0 +1,46 @@
+
+		{{#if this.title}}
+		<h1>{{this.title}}</h1>
+		<br><br>
+		{{/if}}
+			
+
+
+
+		{{#if this.status}}
+				<div class="text-center">
+					<img src="./assets/images/procurar.png">
+					<h1> NO RESULTS FOUND</h1>
+				</div>
+		{{else}}
+
+<div class="text-center container">
+	<div class="row d-flex">
+		{{#each this}}
+		<div class="col-sm">
+			<div class="thumbnail">
+			{{#if this.poster_path}}
+			<img  class="border border-white "style=" box-shadow:5px 10px 10px #000000; border-radius: 8px;" src="https://image.tmdb.org/t/p/w185{{this.poster_path}}" alt="{{this.id}}" "> 
+			{{else}}
+			<img "style="  box-shadow:5px 10px 10px #000000;border-radius: 8px;" src="./assets/images/Cota.png" alt="{{this.id}} " > 
+			{{/if}}
+				<div class="caption">
+					<p class="text-center text-white" style="font-size:20px">{{this.name}}</p>
+				</div>
+
+			
+		     </div>
+    	</div>
+	{{/each}}
+</div>
+
+	{{#if this.pagePrev }}
+			    <button type="button" id="btnPrev" data-page={{this.pagePrev}} class="btn btthis.pagePrevn-primary">page {{this.pagePrev}} </button>
+		{{/if}}			
+	{{#if this.pageNext}}
+			    <button type="button" id="btnNext" data-page={{this.pageNext}} class="btn btn-primary">{{this.page}} page {{this.pageNext}}</button>
+				{{/if}}	
+
+</div>
+	{{/if}}	
+	

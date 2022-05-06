@@ -1,0 +1,129 @@
+ <! List of groups>
+
+ {{#if this.status}}
+				<div class="text-center">
+					<img src="./assets/images/procurar.png">
+					<h1> NO RESULTS FOUND</h1>
+				</div>
+		{{else}}
+     
+
+  <div class="container" data-gId="{{this.id}}">
+  {{#each this}}
+    <div class="row text-white">
+      <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4">
+        <div class="px-2">
+          <div class="card bg-dark mb-3">
+            <h5 class="card-header">{{this.name}} 
+
+              {{#unless this.isPending}}
+              <i style="  float: right;" data-id="{{this.id}}" class="fa fa-wrench" data-toggle="modal" data-target="#editModal" data-va></i>
+              
+              {{#if this.owner}}
+              <i style="  float: left;  color:red" data-gId="{{this.id}}"  class="fa fa-window-close">   </i>
+               {{/if}}
+                {{/unless}}
+
+
+            
+           
+            </h5>
+            <div class="card-body">
+              <h5 class="card-text">{{this.description}}</h5>
+
+                 {{#unless this.isPending}}
+              <a class="btn btn-primary text-light" id="btnVisit" data-id='{{this.id}}' >Visit Group</a>
+
+              <i style="  float: right;" data-id="{{this.id}}" class="fa fa-share" data-toggle="modal" data-target="#sharemodal" data-va></i>
+                 {{/unless}}
+
+                 {{#if this.isPending}}
+                             <i style="  float: center;" data-id="{{this.id}}" class="fa fa-check" ></i>
+                             <i style="  float: center;" data-id="{{this.id}}" class="fa fa-times" ></i>
+               {{/if}}
+
+                 
+              
+           </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+    </div>
+
+
+
+
+
+        <! Edit group modal>
+
+      <div class="modal fade" id="editModal" tabindex="-1" role="dialog"  aria-hidden="true">
+     <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 >Edit Group </h5>
+
+           <h1>{{@index}}</h1>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">New name: </label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">New description:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div id='gid' class="modal-footer">
+    <h1>  {{this.name}} </h1>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="btnEdit" data-groupId="{{this.id}}">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<! Share modal>
+
+      <div class="modal fade" id="sharemodal" tabindex="-1" role="dialog"  aria-hidden="true">
+     <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5>Share Group </h5>
+
+           <h1>{{@index}}</h1>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-username" class="col-form-label">Username: </label>
+            <input type="text" class="form-control" id="recipient-username">
+          </div>
+         
+        </form>
+      </div>
+      <div id='gid' class="modal-footer">
+    <h1>  {{this.name}} </h1>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="btnShare" data-groupId="{{this.id}}">Share</button>
+      </div>
+    </div>
+  </div>
+</div>
+ {{/if}}
+

@@ -1,0 +1,151 @@
+h1 {
+  color: #ffff !important; /*Overwrite bootstrap css */
+  text-align: center !important;
+}
+
+
+
+
+/* Movie page*/
+.description {
+  font-family: arial;
+  border-radius: 25px;
+  width: 30%;
+  background: rgba(78, 78, 78, 0.6);
+  color: #fff;
+  padding: 15px;
+  margin: 0 auto;
+  min-width: 700px;
+}
+
+.imagediv {
+  text-align: center;
+}
+
+
+.imagedivL{
+  position: relative;
+  top: 500px;
+}
+
+
+.my-container {
+  position: relative;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-top: 200px;
+  z-index: 1;
+}
+
+
+.my-container h1 {
+    padding: 50px;
+    z-index: 2;
+    position: relative;
+    color: #fff;
+    font-size:50px;
+    margin-right: auto;
+    width: 50%;
+    align-content: center;
+} 
+
+
+.my-container2 {
+    position:relative;   
+}
+
+
+#bg {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  opacity: 0.05;
+  z-index: 1;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+
+}
+
+.my-container2 img{
+  border:2px solid #ffffff;
+  border-radius: 25px;
+  
+  
+}
+
+.my-container2 img{
+  border:2px solid #ffffff;
+  border-radius: 25px;
+  
+}
+
+#btnBack{
+position: relative;
+z-index: 1;
+
+
+}
+
+
+#shareButton{
+  
+    float: right;
+    
+  
+
+}
+
+
+/*home page search*/
+.my-my-container-1{
+  position: absolute;
+}
+.my-container-1 img {
+  z-index: 100;
+  position: absolute;
+  align-content: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  opacity: 0.05;
+}
+
+
+
+
+
+
+
+
+
+/*SignUp form*/
+
+.login-form-1{
+  background: rgb(36, 36, 36);
+  border-radius: 20px;
+  padding: 5%;
+  box-shadow:2px 9px 65px 6px rgba(95, 95, 95, 0.88);
+	margin: 0 auto;
+}
+
+
+.btnSubmit{
+  width: 50%;
+  border-radius: 1rem;
+  padding: 1.5%;
+  border: none;
+  cursor: pointer;
+}
+
+.login-form-1 .btnSubmit{
+  font-weight: 600;
+  color: #fff;
+  background-color: #0062cc;
+}
+
+

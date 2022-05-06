@@ -1,0 +1,53 @@
+<div class="my-container-1">
+
+	<div class="container-back">
+		<i class="bi bi-arrow-left-square-fill"></i>
+
+
+
+
+	</div>
+</div>
+{{#if this.backdrop_path}}
+<img src="https://image.tmdb.org/t/p/w780/{{this.backdrop_path}}" id="bg" alt="">
+{{/if}}
+
+
+
+<div class="my-container2">
+
+
+	<div class="imagediv">
+
+		{{#if this.poster_path}}
+		<img src=" https://image.tmdb.org/t/p/w185{{this.poster_path}}">
+		{{else}}
+		<img src="./assets/images/Cota.png">
+		{{/if}}
+
+
+		<br><br>
+
+		<div class="rating">
+			<h1>{{this.name}}</h1><br>
+			<h2 class="text-light">Rating: &#11088 {{this.vote_average}}</h2>
+
+			<div id='dropdown' ></div>
+			<i class="fa fa-check text-light"  data-id='{{this.id}}'></i>
+
+
+		</div>
+
+
+
+
+		<br><br>
+		<div class="description">
+			<h2>Overview:</h2>
+			<p>{{this.overview}}</p>
+		</div>
+		<br><br>
+	</div>
+
+</div>
+ <i class="fa  fa-arrow-left"style="font-size:60px; color:red"id="btnBack"></i>

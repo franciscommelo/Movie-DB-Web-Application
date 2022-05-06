@@ -1,0 +1,43 @@
+<h1 class="display-4 py-2 text-truncate">{{this.name}}</h1><br>
+
+
+ {{#if this.status}}
+				<div class="text-center">
+					<img src="./assets/images/procurar.png">
+					<h1> NO RESULTS FOUND</h1>
+				</div>
+		{{else}}
+     
+
+  <div class="container" id="container" data-id='{{this.id}}'   data-name ='{{this.name}}'>
+
+  <div class="range text-light">
+
+  <label for="min">Min:</label>
+  <input type="number" id="min" step="0.1" name="quantity" min="1" max="10">
+
+  <label for="max">Max:</label>
+  <input type="number" id="max" step="0.1" name="quantity" min="1" max="10">
+  
+  <button type="submit" id="butInsert" class="btn btn-primary"  >Refresh</button>
+  
+  </div>
+  <br>
+
+<div class="row">
+      {{#each TV_Shows}}
+      <div class="col-sm text-center">
+        <div class="thumbnail">
+          <img  class="border border-white "style=" box-shadow:5px 10px 10px #000000; border-radius: 8px;" src=" https://image.tmdb.org/t/p/w185{{this.poster_path}}" alt="{{this.id}} " > 
+          <div class="caption">
+            <p class="text-center text-white" style="font-size:20px">{{this.name}}</p>
+            <button data-name="{{this.name}}" id='btnDelete' data-dismiss="modal" type="button" class="btn btn-danger">Delete</button>
+          </div>
+        </a>
+      </div>
+     </div>
+    {{/each}}
+  </div>
+  </div>
+
+  {{/if}}

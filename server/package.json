@@ -1,0 +1,23 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cota-auth.js",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "cookie-parser": "^1.4.5",
+    "elasticsearch": "^16.7.3",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "hbs": "^4.1.1",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.0",
+    "passport": "^0.4.1",
+    "session-file-store": "^1.4.0"
+  },
+  "scripts": {
+    "test": "cd Tests & call mocha Services-Test.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
